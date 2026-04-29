@@ -10,8 +10,6 @@ students = {
     "Czesław" : 92
 }
 
-grades = dict()
-passed = []
 # -- FUNCTIONS --
 '''
 Points to grades:
@@ -45,10 +43,7 @@ passed = []
 #   dictionary: student --> grade
 for k, v in students.items():
     grades[k] = get_grade(v)
-
-# print results
-for k, v in grades.items():
-    if has_passed(v):
+    if has_passed(grades[k]):
         print(f"{k} {v} - Passed")
         passed.append(k)
     else:
